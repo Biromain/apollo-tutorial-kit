@@ -13,7 +13,7 @@ npm install
 npm start
 ```
 
-Then open [http://localhost:8080/graphql](http://localhost:8080/graphql)
+Then open [http://localhost:8080/graphql](http://localhost:8080/graphiql)
 
 When you paste this on the left side of the page:
 

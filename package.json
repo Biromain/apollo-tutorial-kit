@@ -19,7 +19,7 @@
     "Apollo",
     "Meteor"
   ],
-  "author": "Jonas Helfer <jonas@helfer.email>",
+  "author": "Jonas Helfer <jonas@helfer.email>, Jesper O. Christensen <https://github.com/Karnich>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/apollostack/apollo-starter-kit/issues"
