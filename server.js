@@ -3,7 +3,7 @@ import { apolloExpress, graphiqlExpress } from 'apollo-server';
 import { makeExecutableSchema, addMockFunctionsToSchema } from 'graphql-tools';
 import * as bodyParser from 'body-parser';
 import schema from './data/schema';
-import resolvers from './data/resolvers.js';
+import resolvers from './data/resolvers';
 import Mocks from './data/mocks';
 
 const GRAPHQL_PORT = 8080;
@@ -12,7 +12,7 @@ const graphQLServer = express();
 
 const executableSchema = makeExecutableSchema({
   typeDefs: schema,
-  resolvers: resolvers
+  resolvers,
 });
 
 addMockFunctionsToSchema({
