@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "description": "Minimal set of code to write a GraphQL server with Apollo graphql-tools",
   "scripts": {
-    "start": "nodemon ./server.js --exec babel-node",
+    "start": "nodemon ./server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/apollostack/apollo-starter-kit.git"
+    "url": "git+https://github.com/CaveOfCodeBlog/apollo-starter-kit.git"
   },
   "keywords": [
     "Node.js",
@@ -22,9 +22,9 @@
   "author": "Jonas Helfer <jonas@helfer.email>, Jesper O. Christensen <https://github.com/Karnich>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/apollostack/apollo-starter-kit/issues"
+    "url": "git+https://github.com/CaveOfCodeBlog/apollo-starter-kit/issues"
   },
-  "homepage": "https://github.com/apollostack/apollo-starter-kit#readme",
+  "homepage": "https://github.com/CaveOfCodeBlog/apollo-starter-kit#readme",
   "dependencies": {
     "express": "4.14.0",
     "apollo-server": "0.3.2",
