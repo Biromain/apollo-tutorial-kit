@@ -1,5 +1,5 @@
 import express from 'express';
-import { apolloExpress, graphiqlExpress } from 'apollo-server';
+import { graphqlExpress, graphiqlExpress } from 'graphql-server-express';
 import { makeExecutableSchema, addMockFunctionsToSchema } from 'graphql-tools';
 import * as bodyParser from 'body-parser';
 import schema from './data/schema.graphql';
@@ -20,9 +20,14 @@ addMockFunctionsToSchema({
   preserveResolvers: true,
 });
 
-graphQLServer.use('/graphql', bodyParser.json(), apolloExpress({
-  schema: executableSchema,
-  context: {},
+graphQLServer.use(bodyParser.urlencoded({ extended: true }));
+graphQLServer.use(bodyParser.json());
+
+graphQLServer.use('/graphql', graphqlExpress(() => {
+  return {
+    schema: executableSchema,
+    context: { },
+  };
 }));
 
 graphQLServer.use('/graphiql', graphiqlExpress({
